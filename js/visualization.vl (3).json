@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Population by Region in 2020",
+  "data": {
+    "url": "https://raw.githubusercontent.com/farwabraza/Homework10/main/viz/data/globalpop.csv"
+  },
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "Population", "type": "quantitative"},
+    "color": {
+      "field": "Region",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "East Asia & Pacific",
+          "South Asia",
+          "North America",
+          "Latin America & Caribbean",
+          "Sub-Saharan Africa",
+          "Europe & Central Asia",
+          "Middle East & North Africa"
+        ],
+        "range": [
+          "#4575b4",
+          "#91bfdb",
+          "#d73027",
+          "#fc8d59",
+          "#fee090",
+          "#e0f3f8",
+          "#ffffbf"
+        ]
+      }
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Population", "type": "quantitative", "format": ","}
+    ]
+  },
+  "view": {"stroke": null},
+  "config": {}
+}

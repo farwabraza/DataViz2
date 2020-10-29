@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Global Expected Population Growth from 2020 to 2021",
+  "width": 800,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/farwabraza/DataViz2/main/data/globalpop-year.csv"
+  },
+  "params": [
+    {
+      "name": "Region",
+      "bind": {
+        "input": "select",
+        "options": [
+          "East Asia & Pacific",
+          "South Asia",
+          "North America",
+          "Latin America & Caribbean",
+          "Sub-Saharan Africa",
+          "Europe & Central Asia",
+          "Middle East & North Africa",
+          "Australia"
+        ],
+        "labels": [
+          "East Asia & Pacific",
+          "South Asia",
+          "North America",
+          "Latin America & Caribbean",
+          "Sub-Saharan Africa",
+          "Europe & Central Asia",
+          "Middle East & North Africa",
+          "Australia"
+        ],
+        "name": "Region:"
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Region == Region"},
+    {"filter": {"field": "Year", "oneOf": [2020, 2021]}}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Inc",
+      "type": "quantitative",
+      "title": "Population Growth (Years)"
+    },
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "title": "Country",
+      "axis": {"offset": 5, "ticks": false, "minExtent": 70, "domain": false}
+    }
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "detail": {"field": "Country", "type": "nominal"},
+        "color": {"value": "#db646f"}
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true},
+      "encoding": {
+        "color": {
+          "field": "Year",
+          "type": "ordinal",
+          "scale": {"domain": [2020, 2021], "range": ["#e6959c", "#911a24"]},
+          "title": "Year"
+        },
+        "size": {"value": 100},
+        "opacity": {"value": 1}
+      }
+    }
+  ],
+  "config": {}
+}
