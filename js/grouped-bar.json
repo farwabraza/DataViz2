@@ -1,9 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "title": "World Share of Top 5 Most Populated Countries And Their Rate of Population Growth",
-  "width": 300,
-  "height": 240,
-  "padding": 5,
+  "width": "container",
   "data": [
     {
       "name": "table",
