@@ -63,6 +63,7 @@
           <p style="text-align:center;","font-size:100%;","background-color:powderblue;">The current population of the world stands at a staggerings 7.8 billion and is expected to reach as high as 9.9 billion by 2050. Hewever, these growths in population are vastly different around the world. By analyzing factors such as income groups and rate of increase per country, we visualizae and understand the difference in growth for each country.</p>
         </div>
       </div>
+     </div>
   <!-- end pure grid group -->
   <script type="text/javascript">
 
@@ -114,19 +115,17 @@ timerID = setTimeout("now(startdatum.getYear(),startdatum.getMonth(),startdatum.
 window.onload=maind
 </script>
 
-Current world population (estimated): <span id="worldpop" style="font-weight: bold","text-align:center;></span>.
-	</div>
+Current world population (estimated): <span id="worldpop" style="font-weight: bold","text-align:center;"></span>.
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="description description-left">
-            <h2>This is the first section</h2>
-            <p>The first column is used for description while the next two columns are merged and used for visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
-          </div>
+        <div class="pure-u-1-2">
+            <h2>Global Map of Populations</h2>
+             <div id="vis1" class="vis-container"></div>
         </div>
-        <div class="pure-u-2-3">
-          <div id="vis1" class="vis-container"></div>
+        <div class="pure-u-2-4">
+	 <h2>Scatterplot of Expected Populations</h2>
+          <div id="vis2"  class="vis-container"></div>
         </div>
     </div>
     <!-- end pure grid group -->
@@ -134,7 +133,7 @@ Current world population (estimated): <span id="worldpop" style="font-weight: bo
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-2-3">
-          <div id="vis2"  class="vis-container"></div>
+          
         </div>
         <div class="pure-u-1-3">
           <div class="description description-right">
