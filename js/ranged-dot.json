@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Global Expected Population Growth from 2020 to 2021",
   "width": "container",
-  "height": 600
+  "height": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/farwabraza/DataViz2/main/data/globalpop-year.csv"
   },
