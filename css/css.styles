@@ -1,0 +1,29 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr 1.4fr 1.1fr;
+  grid-template-rows: 3.5fr 6.5fr 2fr 10fr 2fr 9fr 2fr 6.5fr 2fr;
+  gap: 4px 2px;
+  grid-template-areas:
+    "Header Header Header Header"
+    "Para1 Para1 Para1 Para1"
+    "Viz1h Viz1h Viz1h Viz1h"
+    "Viz1 Viz1 Viz1 Viz1"
+    "viz2h viz2h Viz3h Viz3h"
+    "Viz2 Viz2 Viz3 Viz3"
+    "Viz4h Viz4h Viz5h Viz5h"
+    "Viz4 Viz4 Viz5 Viz5"
+    "Footer Footer Footer Footer";
+}
+.Header { grid-area: Header; }
+.Para1 { grid-area: Para1; }
+.Viz1h { grid-area: Viz1h; }
+.Viz1 { grid-area: Viz1; }
+.viz2h { grid-area: viz2h; }
+.Viz3h { grid-area: Viz3h; }
+.Viz2 { grid-area: Viz2; }
+.Viz3 { grid-area: Viz3; }
+.Viz4h { grid-area: Viz4h; }
+.Viz5h { grid-area: Viz5h; }
+.Viz4 { grid-area: Viz4; }
+.Viz5 { grid-area: Viz5; }
+.Footer { grid-area: Footer; }
