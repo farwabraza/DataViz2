@@ -120,7 +120,7 @@ pre {
 
 .Viz1h { grid-area: Viz1h; }
 
-#Title { grid-area: Pic;
+#Title { grid-area: Viz1h;
 	 display: grid;
  	 place-items: center;
 	 margin: 0 auto;
@@ -133,7 +133,7 @@ pre {
 
 .Viz1 { grid-area: Viz1; }
 
-#Map { grid-area: Pic;
+#Map { grid-area: Viz1;
        display: grid;
        place-items: center;
        margin: 0 auto;
