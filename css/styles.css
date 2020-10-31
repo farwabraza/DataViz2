@@ -77,8 +77,6 @@ pre {
         display: grid;
  	place-items: center;
         margin: 0 auto;
-        width: auto;
-        height: 200px;
         text-align: center;
         align-content: stretch;
         background-color: #faf0e6;
@@ -119,8 +117,6 @@ pre {
 #Title { grid-area: Viz1h;
 	  display: grid;
 	  place-items: center;
-          width: auto;
-          height: 100px;
           text-align: center;
           background-color: #f2d9bf;
           justify-content: center
@@ -131,8 +127,6 @@ pre {
 #Map { grid-area: Viz1;
 	  display: grid;
 	  place-items: center;
-          width: auto;
-          height: 100px;
           text-align: center;
           background-color: #f2d9bf;
           justify-content: center
