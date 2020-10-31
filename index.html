@@ -20,11 +20,20 @@
 
 <div class="grid-container">
 	<div class="Header">
-          <h1>Current Global Populations and Their Predicted Values in 2021</h1>
-        </div>
- 	<div class="Para1">
-	  <p>The current population of the world stands at a staggering 7.8 billion and is expected to reach as high as 9.9 billion by 2050. Hewever, these growths in population are vastly different around the world. By analyzing factors such as income groups and rate of increase per country, we visualizae and understand the difference in growth for each country.</p>
- 	<script type="text/javascript">
+		<div id="Header">
+			<h1>Current Global Populations and Their Predicted Values in 2021</h1>
+        	</div>
+	</div>
+	
+ 	<div class="Para">
+		<div id="Para">
+	  		<p>The current population of the world stands at a staggering 7.8 billion and is expected to reach as high as 9.9 billion by 2050. Hewever, these growths in population are vastly different around the world. By analyzing factors such as income groups and rate of increase per country, we visualizae and understand the difference in growth for each country.</p>
+		</div>
+	</div>
+	<div class="Counter">
+		<div id="Counter">		
+
+<script type="text/javascript">
 
 	function maind(){
 	startdate = new Date()
@@ -72,65 +81,12 @@
 	}
 
 	window.onload=maind
-	</script>
-
-	<h3>Current world population (estimated): <span id="worldpop" style="font-weight: bold","text-align:center;"></span>.</h3>
-	</div>
-	<br>
-	<br>
-	
-    <!-- pure grid group -->
-    <div class="Viz1h">
-	 <h3>Global Map of Populations</h3>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="Viz1">
-          <div id="Map"></div>
-    </div>
-	<br>
-        <div class="Viz2h">
-	  <h3>Top 5 Countries</h2>
-        </div>
-        <div class="Viz2">
-	   <div id="Bar"></div>
-        </div>
-    </div>
-    <!-- end pure grid group -->
-	 
-    <!-- pure grid group -->
-    <div class="Viz3h">
-	  <h2>Rate of Population Growth from 2020 to 2021</h2>
-        </div>
-        <div class="Viz3">
-	   <div id="Dot"></div>
-        </div>
-      <br>
-  
-      <div class="Footer">
-        <pre>This visualisation is created by <a href="https://github.com/farwabraza" target="_blank">Farwa Batool Raza</a>. The datasource is <a href="https://github.com/farwabraza/DataViz2" target="_blank">available here</href>.</pre>
-      </div>
-
-  </div> <!-- end page -->
-   
-<script type="text/javascript">
-  var specVis1 = "js/map_pop.json";
-  var specVis2= "js/interactive_scatter.json";
-  var specVis3= "js/grouped-bar.json";
-
-  vegaEmbed('#Map', specVis1, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-   vegaEmbed('#Bar', specVis2, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  vegaEmbed('#Dot', specVis3, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
 </script>
+
+			<h3>CURRENT WORLD POPULATION:</h3> 
+		<h3><span id="worldpop" style="font-weight: bold","text-align:center;"></span>.</h3>
+	</div>
+	</div>
+
 </body>
 </html>
