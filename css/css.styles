@@ -1,6 +1,7 @@
-body{
-     background: #FAF0E6;
-     }
+body {
+     background: #fAf0e6;
+}
+
 h1 { 
     font-family: "Open Sans"; 
     font-size: 23px; 
@@ -10,6 +11,7 @@ h1 {
     font-weight: 900; 
     line-height: 23px; 
 } 
+
 h3 { 
     font-family: "Open Sans";
     font-size: 17px;
@@ -19,6 +21,7 @@ h3 {
     font-weight: 700;
     line-height: 23px; 
 } 
+
 p { 
      font-family: "Open Sans";
      font-size: 14px;
@@ -28,6 +31,7 @@ p {
      font-weight: 400;
      line-height: 23px; 
 } 
+
 blockquote { 
      font-family: "Open Sans"; 
      font-size: 21px; 
@@ -36,6 +40,7 @@ blockquote {
      font-weight: 400; 
      line-height: 30px; 
 } 
+
 pre { 
       font-family: "Open Sans"; 
       font-size: 11px; 
