@@ -71,10 +71,14 @@ pre {
 .Para { grid-area: Para; }
 
 #Para { grid-area: Para;
+        display: block;
+        margin: 0 auto;
         align-content: stretch;
         background-color: #faf0e6;
 }
 #Pic { grid-area: Pic;
+       display: block;
+       margin: 0 auto;
        align-content: stretch;
        background-color: #faf0e6;
 }
