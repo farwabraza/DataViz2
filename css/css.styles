@@ -63,41 +63,56 @@ pre {
 .Header { 
      grid-area: Header;
      text-align: center;
-     background-colour: #f2d9bf; 
+     background: #f2d9bf; 
 }
 .Para1 { grid-area: Para1;}
 .Viz1h { 
      grid-area: Viz1h;
      text-align: center;
-     background-colour: #f2d9bf; 
+     background: #f2d9bf; 
 }
 .Viz1 { grid-area: Viz1; }
-.viz2h { 
+
+#Map { grid-area: Viz1; 
+display: block;
+margin: 0 auto;}
+
+.Viz2h { 
      grid-area: Viz2h;
      text-align: center;
-     background-colour: #f2d9bf; 
+     background: #f2d9bf; 
 }
 .Viz3h { 
      grid-area: Viz3h;
      text-align: center;
-     background-colour: #f2d9bf; 
+     background: #f2d9bf; 
 }
 .Viz2 { grid-area: Viz2; }
+
+#Bar { grid-area: Viz2; 
+display: block;
+margin: 0 auto;}
+
 .Viz3 { grid-area: Viz3; }
+
+#Dot { grid-area: Viz3; 
+display: block;
+margin: 0 auto;}
+
 .Viz4h { 
      grid-area: Viz4h; 
      text-align: center;
-     background-colour: #f2d9bf;
+     background: #f2d9bf;
 }
 .Viz5h { 
      grid-area: Viz5h;
      text-align: center;
-     background-colour: #f2d9bf;
+     background: #f2d9bf;
 }
 .Viz4 { grid-area: Viz4; }
 .Viz5 { grid-area: Viz5; }
 .Footer { 
       grid-area: Footer; 
       text-align: center;
-      background-colour: #f2d9bf;
+      background: #f2d9bf;
 }
