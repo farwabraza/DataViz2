@@ -100,3 +100,35 @@ pre {
           background-color: #f2d9bf;
           align-content: center
 }
+
+.viz-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Viz1h Viz1h Viz1h Viz1h"
+    "Viz1 Viz1 Viz1 Viz1";
+}
+
+.Viz1h { grid-area: Viz1h; }
+
+#Title { grid-area: Pic;
+       display: block;
+       margin: 0 auto;
+       width: auto;
+       height: 100px;
+       align-content: center;
+       background-color: #f2d9bf;
+}
+
+.Viz1 { grid-area: Viz1; }
+
+#Map { grid-area: Pic;
+       display: block;
+       margin: 0 auto;
+       width: auto;
+       height: 400px;
+       align-content: center;
+       background-color: #faf0e6;
+}
