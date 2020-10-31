@@ -4,7 +4,7 @@ body {
 
 h1 { 
     font-family: 'Hind Vadodara', sans-serif; 
-    font-size: 26px; 
+    font-size: 30px; 
     font-style: normal;
     text-align: center;
     font-variant: normal; 
@@ -65,7 +65,7 @@ pre {
 
 #Header { grid-area: Header;
           width: auto;
-          height: 100px;
+          height: 50px;
           background-color: #f2d9bf;
           align-content: center
 }
