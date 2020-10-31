@@ -118,7 +118,7 @@ grid-area: Para;
 
 #Map {
   grid-area: Viz1;
-	  display: grid;
+	  display: block;
 	  place-items: center;
 	margin: 0 auto;
 }
