@@ -1,5 +1,5 @@
 body{
-     color: #FAF0E6;
+     background: #FAF0E6;
      }
 h1 { 
     font-family: "Open Sans"; 
@@ -44,75 +44,35 @@ pre {
       font-weight: 400; 
       line-height: 23px; 
 }
+
 .grid-container {
   display: grid;
-  grid-template-columns: 1.1fr 1.4fr 1.4fr 1.1fr;
-  grid-template-rows: 3.5fr 6.5fr 2fr 10fr 2fr 9fr 2fr 6.5fr 2fr;
-  gap: 4px 2px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.6fr 1.5fr 1fr;
+  gap: 0px 0px;
   grid-template-areas:
     "Header Header Header Header"
-    "Para1 Para1 Para1 Para1"
-    "Viz1h Viz1h Viz1h Viz1h"
-    "Viz1 Viz1 Viz1 Viz1"
-    "Viz2h Viz2h Viz3h Viz3h"
-    "Viz2 Viz2 Viz3 Viz3"
-    "Viz4h Viz4h Viz5h Viz5h"
-    "Viz4 Viz4 Viz5 Viz5"
-    "Footer Footer Footer Footer";
+    "Para Para Para Para"
+    "Counter Counter Counter Counter";
 }
-.Header { 
-     grid-area: Header;
-     text-align: center;
-     background: #f2d9bf; 
-}
-.Para1 { grid-area: Para1;}
-.Viz1h { 
-     grid-area: Viz1h;
-     text-align: center;
-     background: #f2d9bf; 
-}
-.Viz1 { grid-area: Viz1; }
 
-#Map { grid-area: Viz1; 
-display: block;
-margin: 0 auto;}
+.Header { grid-area: Header; }
 
-.Viz2h { 
-     grid-area: Viz2h;
-     text-align: center;
-     background: #f2d9bf; 
+#Header { grid-area: Header;
+          background-color: #f2d9bf;
+          justify-content: center
 }
-.Viz3h { 
-     grid-area: Viz3h;
-     text-align: center;
-     background: #f2d9bf; 
+
+.Para { grid-area: Para; }
+
+#Para { grid-area: Para;
+        justify-content: center;
+        background-color: #faf0e6;
 }
-.Viz2 { grid-area: Viz2; }
 
-#Bar { grid-area: Viz2; 
-display: block;
-margin: 0 auto;}
+.Counter { grid-area: Counter; }
 
-.Viz3 { grid-area: Viz3; }
-
-#Dot { grid-area: Viz3; 
-display: block;
-margin: 0 auto;}
-
-.Viz4h { 
-     grid-area: Viz4h; 
-     text-align: center;
-     background: #f2d9bf;
-}
-.Viz5h { 
-     grid-area: Viz5h;
-     text-align: center;
-     background: #f2d9bf;
-}
-.Viz4 { grid-area: Viz4; }
-.Viz5 { grid-area: Viz5; }
-.Footer { 
-      grid-area: Footer; 
-      text-align: center;
-      background: #f2d9bf;
+#Counter { grid-area: Counter;
+          background-color: #f2d9bf;
+          justify-content: center
 }
