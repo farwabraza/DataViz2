@@ -9,7 +9,6 @@ h1 {
     text-align: center;
     font-variant: normal; 
     font-weight: 900; 
-    line-height: 1.5; 
 } 
 
 h3 { 
@@ -19,7 +18,6 @@ h3 {
     text-align: center;
     font-variant: normal;
     font-weight: 700;
-    line-height: 1.5; 
 } 
 
 p { 
@@ -119,26 +117,26 @@ pre {
 .Viz1h { grid-area: Viz1h; }
 
 #Title { grid-area: Viz1h;
-	 display: grid;
- 	 place-items: center;
-	 margin: 0 auto;
-         align-content: center;
-         text-align: center;
-         background-color: #f2d9bf;
+	  display: grid;
+	  place-items: center;
+          width: auto;
+          height: 100px;
+          text-align: center;
+          background-color: #f2d9bf;
+          justify-content: center
 }
 
 .Viz1 { grid-area: Viz1; }
 
 #Map { grid-area: Viz1;
-       display: grid;
-       place-items: center;
-       margin: 0 auto;
-       width: auto;
-       height: 400px;
-       align-content: center;
-       background-color: #faf0e6;
+	  display: grid;
+	  place-items: center;
+          width: auto;
+          height: 100px;
+          text-align: center;
+          background-color: #f2d9bf;
+          justify-content: center
 }
-
 #choropleth_map {
 	top: auto;
 	bottom: auto; 
