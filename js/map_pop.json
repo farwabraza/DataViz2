@@ -2,8 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": "container",
   "height": 400,
-  "style": {"cell": {"stroke": "transparent"}
-  },
   "data": {
     "url": "https://raw.githubusercontent.com/farwabraza/Homework10/main/viz/js/ne_110m_admin_0_countries.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
@@ -25,7 +23,11 @@
     }
   ],
   "projection": {"type": "equirectangular"},
-  "mark": {"type": "geoshape"},
+  "selection": {
+  "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
+  "select": {"type": "multi"}
+  },
+  "mark": {"type": "geoshape", "stroke": "darkblue"},
   "encoding": {
     "color": {
       "field": "Population",
@@ -40,7 +42,8 @@
           1000000000,
           10000000000
         ]
-      }
+      },
+      "condition": [{"selection": "highlight", "value": "#f0f0f0"}]
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
@@ -52,6 +55,11 @@
   "config": {
     "style": {"cell": {"stroke": "transparent"}
   },
-    "background": "#eeeae4"
+   "legend": { 
+      "orient": "bottom-left",
+      "gradientDirection": "horizontal",
+      "gradientLength": 150
+    },
+    "background": "#fAf0e6"
   }
 }
