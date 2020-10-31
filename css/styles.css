@@ -76,6 +76,9 @@ pre {
         align-content: stretch;
         background-color: #faf0e6;
 }
+
+.Pic { grid-area: Pic; }
+
 #Pic { grid-area: Pic;
        display: block;
        margin: 0 auto;
