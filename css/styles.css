@@ -92,5 +92,5 @@ pre {
 
 #Counter { grid-area: Counter;
           background-color: #f2d9bf;
-          justify-content: center
+          align-content: center
 }
