@@ -66,6 +66,7 @@ pre {
 #Header { grid-area: Header;
           width: auto;
           height: 100px;
+          text-align: center;
           background-color: #f2d9bf;
           justify-content: center
 }
@@ -77,6 +78,7 @@ pre {
         margin: 0 auto;
         width: auto;
         height: 200px;
+        text-align: center;
         align-content: stretch;
         background-color: #faf0e6;
 }
@@ -117,6 +119,7 @@ pre {
          width: auto;
          height: 100px;
          align-content: center;
+         text-align: center;
          background-color: #f2d9bf;
 }
 
@@ -127,4 +130,13 @@ pre {
        height: 400px;
        align-content: center;
        background-color: #faf0e6;
+}
+
+#choropleth_map {
+	top: auto;
+	bottom: auto; 
+	left: auto;
+	right: auto;
+	/*height: 1000px;
+	width: auto;*/
 }
