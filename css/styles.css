@@ -57,7 +57,7 @@ pre {
   gap: 0px 0px;
   grid-template-areas:
     "Header Header Header Header"
-    "Para Para Para Para"
+    "Para Para Pic Pic"
     "Counter Counter Counter Counter";
 }
 
@@ -73,6 +73,10 @@ pre {
 #Para { grid-area: Para;
         align-content: stretch;
         background-color: #faf0e6;
+}
+#Pic { grid-area: Pic;
+       align-content: stretch;
+       background-color: #faf0e6;
 }
 
 .Counter { grid-area: Counter; }
