@@ -64,6 +64,7 @@ pre {
 .Header { grid-area: Header; }
 
 #Header { grid-area: Header;
+	  display: flex;
           width: auto;
           height: 100px;
           text-align: center;
@@ -74,7 +75,7 @@ pre {
 .Para { grid-area: Para; }
 
 #Para { grid-area: Para;
-        display: block;
+        display: flex;
         margin: 0 auto;
         width: auto;
         height: 200px;
@@ -86,7 +87,7 @@ pre {
 .Pic { grid-area: Pic; }
 
 #Pic { grid-area: Pic;
-       display: block;
+       display: flex;
        margin: 0 auto;
        width: auto;
        height: 200px;
@@ -97,10 +98,12 @@ pre {
 .Counter { grid-area: Counter; }
 
 #Counter { grid-area: Counter;
-          width: auto;
-          height: 100px;
-          background-color: #f2d9bf;
-          justify-content: center
+	   display: flex;
+	   margin: 0 auto;
+           width: auto;
+           height: 100px;
+           background-color: #f2d9bf;
+           justify-content: center
 }
 
 .viz-container {
@@ -116,6 +119,8 @@ pre {
 .Viz1h { grid-area: Viz1h; }
 
 #Title { grid-area: Pic;
+	 display: flex;
+	 margin: 0 auto;
          width: auto;
          height: 100px;
          align-content: center;
@@ -126,6 +131,8 @@ pre {
 .Viz1 { grid-area: Viz1; }
 
 #Map { grid-area: Pic;
+       display: flex;
+       margin: 0 auto;
        width: auto;
        height: 400px;
        align-content: center;
