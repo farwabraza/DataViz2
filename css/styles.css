@@ -67,7 +67,7 @@ pre {
           width: auto;
           height: 100px;
           background-color: #f2d9bf;
-          justify-content: center
+          align-content: center
 }
 
 .Para { grid-area: Para; }
@@ -84,7 +84,7 @@ pre {
 #Pic { grid-area: Pic;
        display: block;
        margin: 0 auto;
-       justify-content: center;
+       align-content: center;
        background-color: #faf0e6;
 }
 
