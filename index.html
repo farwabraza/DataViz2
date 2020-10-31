@@ -24,8 +24,7 @@
         </div>
  	<div class="Para1">
 	  <p>The current population of the world stands at a staggering 7.8 billion and is expected to reach as high as 9.9 billion by 2050. Hewever, these growths in population are vastly different around the world. By analyzing factors such as income groups and rate of increase per country, we visualizae and understand the difference in growth for each country.</p>
- 
-<script type="text/javascript">
+ <script type="text/javascript">
 
 function maind(){
 	startdate = new Date()
@@ -77,7 +76,8 @@ window.onload=maind
 
 <h3>Current world population (estimated): <span id="worldpop" style="font-weight: bold","text-align:center;"></span>.</h3>
 	</div>
-	 
+	 <br>
+	
     <!-- pure grid group -->
     <div class="Viz1h">
 	 <h3>Global Map of Populations</h3>
@@ -86,44 +86,30 @@ window.onload=maind
 
     <!-- pure grid group -->
     <div class="Viz1">
-          <div id="vis1"></div>
+          <div id="Map"></div>
     </div>
-	<div class="pure-g">
-        <div class="pure-u-1-1">
-	  <h2 style="text-align:center;">Top 5 Countries</h2>
+	<br>
+        <div class="Viz2h">
+	  <h3>Top 5 Countries</h2>
         </div>
-        <div class="pure-u-1-1">
-	   <div id="vis3"  class="vis-container"></div>
+        <div class="Viz2">
+	   <div id="Bar"></div>
         </div>
     </div>
     <!-- end pure grid group -->
 	 
     <!-- pure grid group -->
-    <div class="pure-g">
-	<div class="pure-u-1-1">
-	  <h2 style="text-align:center;">Rate of Population Growth from 2020 to 2021</h2>
+    <div class="Viz3h">
+	  <h2>Rate of Population Growth from 2020 to 2021</h2>
         </div>
-        <div class="pure-u-1-1">
-	   <div id="vis4"  class="vis-container"></div>
+        <div class="Viz3">
+	   <div id="Dot"></div>
         </div>
-      
-    </div>
-    <!-- end pure grid group -->
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <div class="description description-left">
-          <h2>third section</h2>
-          <p>Details</p>
-        </div>
-    <!-- end pure grid group -->
+      <br>
   
-    <div class="pure-g">
-      <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://github.com/farwabraza" target="_blank">Farwa Batool Raza</a>. The datasource is <a href="https://github.com/farwabraza/DataViz2" target="_blank">available here</href>.</p>
+      <div class="Footer">
+        <pre>This visualisation is created by <a href="https://github.com/farwabraza" target="_blank">Farwa Batool Raza</a>. The datasource is <a href="https://github.com/farwabraza/DataViz2" target="_blank">available here</href>.</pre>
       </div>
-    </div>
-  
 
   </div> <!-- end page -->
    
@@ -131,23 +117,19 @@ window.onload=maind
   var specVis1 = "js/map_pop.json";
   var specVis2= "js/interactive_scatter.json";
   var specVis3= "js/grouped-bar.json";
-  var specVis4= "js/ranged-dot.json";
 
-  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+  vegaEmbed('#Map', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+   vegaEmbed('#Bar', specVis2, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+  vegaEmbed('#Dot', specVis3, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
 </script>
 </body>
 </html>
