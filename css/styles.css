@@ -105,21 +105,10 @@ pre {
 .viz-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 1.7fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "Viz1h Viz1h Viz1h Viz1h"
     "Viz1 Viz1 Viz1 Viz1";
-}
-
-.Viz1h { grid-area: Viz1h; }
-
-#Title { grid-area: Viz1h;
-	  display: grid;
-	  place-items: center;
-          text-align: center;
-          background-color: #f2d9bf;
-          justify-content: center
 }
 
 .Viz1 { grid-area: Viz1; }
@@ -131,6 +120,8 @@ pre {
           background-color: #f2d9bf;
           justify-content: center
 }
+
+
 #choropleth_map {
 	top: auto;
 	bottom: auto; 
