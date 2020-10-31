@@ -75,6 +75,8 @@ pre {
 #Para { grid-area: Para;
         display: block;
         margin: 0 auto;
+        width: auto;
+        height: 200px;
         align-content: stretch;
         background-color: #faf0e6;
 }
@@ -84,6 +86,8 @@ pre {
 #Pic { grid-area: Pic;
        display: block;
        margin: 0 auto;
+       width: auto;
+       height: 200px;
        align-content: center;
        background-color: #faf0e6;
 }
@@ -91,6 +95,8 @@ pre {
 .Counter { grid-area: Counter; }
 
 #Counter { grid-area: Counter;
+          width: auto;
+          height: 100px;
           background-color: #f2d9bf;
           align-content: center
 }
