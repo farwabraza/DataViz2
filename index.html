@@ -93,6 +93,29 @@
 		<h1><span id="worldpop" style="font-weight: bold","text-align:center;"></span></h1>
 	</div>
 	</div>
+	<br>
+	
+<div class="grid-container">
+  <div class="Viz1h">
+	<div id="Title">
+		<h3>Global Map for Populations Across the World</h3>
+	 </div>
+	</div>
+  <div class="Viz1">
+	<div class="Map"></div>
+	</div>
+</div>
+	
+  var vis1 = "js/map_pop.json";
+  
+  vegaEmbed('#Map', vis1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+
+  
+  
+</script>
 
 
 </body>
