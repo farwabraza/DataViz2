@@ -32,7 +32,7 @@
 	</div>
 	<div class="Pic">
 		<div id="Pic">
-      			<img src="css/pop.png" width= "container" height= "200">
+      			<img src="css/pop1.png" width= "container" height= "200">
     		</div>
 	</div>
 	
@@ -89,7 +89,7 @@
 	window.onload=maind
 	</script>
 
-	<h1>LIVE COUNTER FOR CURRENT WORLD POPULATION<br/><span id="worldpop"></span></h1>
+	<h1>CURRENT WORLD POPULATION<br/><span id="worldpop"></span></h1>
 		</div>
 	</div>
 </div>
@@ -100,12 +100,38 @@
 	<div id="Map"></div>
 	</div>
 </div>
-	
+	<br>
+	<br>
+	<h3> Global Population by Income</h3>
+	<br>
+<div class="income-container">
+	<div class="Radial">
+		<h3>Population Density of Global Income Groups in 2020</h3>
+		<div id="Radial"></div>
+	</div>
+	<div class="Scatter">
+		<h3>Expected Population Scatter of Global Income Groups in 2021</h3>
+		<pre>(click legend to filter)</pre>
+		<div id="Scatter"></div>
+	</div>
+</div>
 <script type="text/javascript">
   
   var vis1 = "js/map_pop.json";
   
   vegaEmbed('#Map', vis1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+	
+  var vis2 = "js/income-radial.json";
+  
+  vegaEmbed('#Radial', vis2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+	
+  var vis3 = "js/scatter_income.json";
+  
+  vegaEmbed('#Scatter', vis3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
