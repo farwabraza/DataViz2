@@ -122,3 +122,28 @@ grid-area: Para;
 	  place-items: center;
 	margin: 0 auto;
 }
+
+.income-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Scatter Scatter Scatter Radial"
+    "Scatter Scatter Scatter Radial";
+}
+.Radial { grid-area: Radial; }
+#Radial {
+  grid-area: Radial;
+	  display: block;
+	  place-items: center;
+	margin: 0 auto;
+}
+
+.Scatter { grid-area: Scatter; }
+#Scatter {
+  grid-area: Scatter;
+	  display: block;
+	  place-items: center;
+	margin: 0 auto;
+}
