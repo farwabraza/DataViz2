@@ -68,7 +68,7 @@
   "width": "container",
   "height": 225,
   "mark": "square",
-  "padding": {"left": 55, "right": 55, "bottom": 5, "top": 5},
+  "padding": {"left": 75, "right": 75, "bottom": 5, "top": 5},
   "selection": {
     "region_highlight": {
       "type": "multi",
