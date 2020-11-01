@@ -161,3 +161,41 @@ grid-area: Para;
 	  place-items: center;
 	margin: 0 auto;
 }
+
+.region-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Title1 Title1 Title1 Title1"
+    "Waffle Dotplot Dotplot Dotplot"
+    "Waffle Dotplot Dotplot Dotplot";
+}
+
+.Title1 { grid-area: Title1; }
+#Title1 {
+  grid-area: Title1;
+	  display: grid;
+	  place-items: center;
+          width: auto;
+          height: 100px;
+          text-align: center;
+          background-color: #f2d9bf;
+          justify-content: center;
+}
+
+.Waffle { grid-area: Waffle; }
+#Waffle {
+  grid-area: Waffle;
+	  display: block;
+	  place-items: center;
+	margin: 0 auto;
+}
+.Dotplot { grid-area: Dotplot; }
+#Dotplot {
+  grid-area: Dotplot;
+	  display: block;
+	  place-items: center;
+	margin: 0 auto;
+}
