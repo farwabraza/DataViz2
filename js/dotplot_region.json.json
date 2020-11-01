@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": "container",
+  "height": "225",
+  "data": {
+    "values": [
+      {"Region": "East Asia & Pacific", "Inc": "24.21549231", "Year": "2020"},
+      {"Region": "South Asia", "Inc": "20.74428818", "Year": "2020"},
+      {"Region": "North America", "Inc": "3.722406013", "Year": "2020"},
+      {
+        "Region": "Latin America & Caribbean",
+        "Inc": "5.367550622",
+        "Year": "2020"
+      },
+      {"Region": "Sub-Saharan Africa", "Inc": "11.57133122", "Year": "2020"},
+      {"Region": "Europe & Central Asia", "Inc": "8.83979777", "Year": "2020"},
+      {
+        "Region": "Middle East & North Africa",
+        "Inc": "3.93051639",
+        "Year": "2020"
+      },
+      {"Region": "Australia", "Inc": "0.3261431", "Year": "2020"},
+      {"Region": "East Asia & Pacific", "Inc": "35.82", "Year": "2021"},
+      {"Region": "South Asia", "Inc": "11.53", "Year": "2021"},
+      {"Region": "North America", "Inc": "1.12", "Year": "2021"},
+      {"Region": "Latin America & Caribbean", "Inc": "39.78", "Year": "2021"},
+      {"Region": "Sub-Saharan Africa", "Inc": "49.65", "Year": "2021"},
+      {"Region": "Europe & Central Asia", "Inc": "21.44", "Year": "2021"},
+      {"Region": "Middle East & North Africa", "Inc": "27.05", "Year": "2021"},
+      {"Region": "Australia", "Inc": "3.18", "Year": "2021"}
+    ]
+  },
+  "transform": [
+    {
+      "filter": {
+        "field": "Region",
+        "oneOf": [
+          "East Asia & Pacific",
+          "South Asia",
+          "North America",
+          "Latin America & Caribbean",
+          "Sub-Saharan Africa",
+          "Europe & Central Asia",
+          "Middle East & North Africa",
+          "Australia"
+        ]
+      }
+    },
+    {"filter": {"field": "Year", "oneOf": [2020, 2021]}}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Inc",
+      "type": "quantitative",
+      "title": "Population Growth (Years)"
+    },
+    "y": {
+      "field": "Region",
+      "type": "nominal",
+      "axis": {"offset": 5, "ticks": false, "minExtent": 70, "domain": false}
+    }
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "detail": {"field": "Region", "type": "nominal"},
+        "color": {"value": "#db646f"}
+      }
+    },
+    {
+      "mark": {"type": "point", "stroke": "black", "strokeWidth": 1, "filled": true},
+      "encoding": {
+        "color": {
+          "field": "Year",
+          "type": "ordinal",
+          "scale": {"domain": [2020, 2021], "range": ["#e6959c", "#911a24"]},
+          "title": "Year"
+        },
+        "size": {"value": 100},
+        "opacity": {"value": 1},
+        "tooltip": [
+          {"field": "Region", "type": "nominal"},
+          {
+            "field": "Inc",
+            "type": "quantitative",
+            "title": "Population Increase %"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "style": {"cell": {"stroke": "transparent"}},
+    "background": "#fAf0e6",
+    "font": "",
+    "axis": {"labelFontSize": 11, "titleFontSize": 13, "titlePadding": 10}
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A Rectangular Unit-Chart",
+  "data": {
+    "values": [
+      {"id": 1, "Region": "Australia", "Percentage": 0.364789953},
+      {"id": 2, "Region": "North America", "Percentage": 2.789370682},
+      {"id": 3, "Region": "North America", "Percentage": 2.789370682},
+      {"id": 4, "Region": "Europe & Central Asia", "Percentage": 4.79556665},
+      {"id": 5, "Region": "Europe & Central Asia", "Percentage": 4.79556665},
+      {
+        "id": 6,
+        "Region": "Latin America & Caribbean",
+        "Percentage": 7.835625145
+      },
+      {
+        "id": 7,
+        "Region": "Latin America & Caribbean",
+        "Percentage": 7.835625145
+      },
+      {
+        "id": 8,
+        "Region": "Latin America & Caribbean",
+        "Percentage": 7.835625145
+      },
+      {
+        "id": 9,
+        "Region": "Middle East & North Africa",
+        "Percentage": 9.378294692
+      },
+      {
+        "id": 10,
+        "Region": "Middle East & North Africa",
+        "Percentage": 9.378294692
+      },
+      {
+        "id": 11,
+        "Region": "Middle East & North Africa",
+        "Percentage": 9.378294692
+      },
+      {"id": 12, "Region": "East Asia & Pacific", "Percentage": 15.39839863},
+      {"id": 13, "Region": "East Asia & Pacific", "Percentage": 15.39839863},
+      {"id": 14, "Region": "East Asia & Pacific", "Percentage": 15.39839863},
+      {"id": 15, "Region": "East Asia & Pacific", "Percentage": 15.39839863},
+      {"id": 16, "Region": "East Asia & Pacific", "Percentage": 15.39839863},
+      {"id": 17, "Region": "East Asia & Pacific", "Percentage": 15.39839863},
+      {"id": 18, "Region": "South Asia", "Percentage": 25.91789301},
+      {"id": 19, "Region": "South Asia", "Percentage": 25.91789301},
+      {"id": 20, "Region": "South Asia", "Percentage": 25.91789301},
+      {"id": 21, "Region": "South Asia", "Percentage": 25.91789301},
+      {"id": 22, "Region": "South Asia", "Percentage": 25.91789301},
+      {"id": 23, "Region": "South Asia", "Percentage": 25.91789301},
+      {"id": 24, "Region": "South Asia", "Percentage": 25.91789301},
+      {"id": 25, "Region": "South Asia", "Percentage": 25.91789301},
+      {"id": 26, "Region": "South Asia", "Percentage": 25.91789301},
+      {"id": 27, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124},
+      {"id": 28, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124},
+      {"id": 29, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124},
+      {"id": 30, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124},
+      {"id": 31, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124},
+      {"id": 32, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124},
+      {"id": 33, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124},
+      {"id": 34, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124},
+      {"id": 35, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124},
+      {"id": 36, "Region": "Sub-Saharan Africa", "Percentage": 33.52006124}
+    ]
+  },
+  "width": "container",
+  "height": 225,
+  "mark": "square",
+  "padding": {"left": 55, "right": 55, "bottom": 5, "top": 5},
+  "selection": {
+    "region_highlight": {
+      "type": "multi",
+      "fields": ["Region"],
+      "bind": "legend"
+    }
+  },
+  "transform": [
+    {"calculate": "ceil(datum.id/ 6)", "as": "X"},
+    {"calculate": "datum.id - (datum.X) *6", "as": "Y"}
+  ],
+  "encoding": {
+    "x": {"field": "X", "type": "ordinal", "axis": null},
+    "y": {"field": "Y", "type": "ordinal", "axis": null},
+    "color": {
+      "field": "Region",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#ffff99",
+          "#a1d76a",
+          "#d8b365",
+          "#e9a3c9",
+          "#f1a340",
+          "#fc8d62",
+          "#5ab4ac",
+          "#984ea3"
+        ]
+      },
+      "legend": {"orient": "right"}
+    },
+    "opacity": {
+      "condition": {"selection": "region_highlight", "value": 1},
+      "value": 0.2
+    },
+    "tooltip": [
+      {"field": "Region", "type": "nominal"},
+      {
+        "field": "Percentage",
+        "type": "nominal",
+        "title": "Regional Population Density (%)"
+      }
+    ]
+  },
+  "config": {
+    "square": {"size": 1200,"stroke":"black", "strokeWidth": 1},
+    "axis": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
+      "labelFontSize": 12
+    },
+    "header": {
+      "labelFont": "sans-serif",
+      "titleFont": "sans-serif",
+      "labelFontSize": 12
+    },
+    "mark": {"font": "sans-serif", "fontSize": 12},
+    "legend": {"labelFont": "sans-serif"},
+    "style": {"cell": {"stroke": "transparent"}},
+    "text": {
+      "baseline": "bottom",
+      "align": "center",
+      "fontWeight": "bold",
+      "font": "sans-serif"
+    },
+    "background": "#fAf0e6"
+  }
+}

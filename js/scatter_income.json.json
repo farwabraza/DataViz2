@@ -1,0 +1,111 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": "container",
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/farwabraza/DataViz2/main/data/globalpop-den.csv"
+  },
+  "params": [
+    {
+      "name": "Population_Above",
+      "value": 1000,
+      "bind": {
+        "input": "range",
+        "min": 10000,
+        "max": 333000000,
+        "step": 10000,
+        "name": "Minimum Population: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "parseFloat(datum.Net) + parseFloat(datum.Population)",
+      "as": "Expected_Population"
+    },
+    {"filter": "datum.Population > 0"},
+    {"filter": "datum.Net > 0"},
+    {"filter": "datum.Expected_Population > Population_Above"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Population",
+      "type": "quantitative",
+      "title": "Current Population",
+      "axis": {"tickCount": 7},
+      "scale": {"type": "log", "domain": [1, 10000000000]}
+    },
+    "y": {
+      "field": "Net",
+      "type": "quantitative",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "log", "domain": [1, 100000000]}
+    }
+  },
+  "layer": [
+    {
+      "selection": {
+        "income_highlight": {
+          "type": "multi",
+          "fields": ["Income"],
+          "bind": "legend"
+        },
+        "hover": {
+          "type": "single",
+          "on": "mouseover",
+          "empty": "none",
+          "fields": ["Country"]
+        },
+        "grid": {"type": "interval", "bind": "scales"}
+      },
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "Expected_Population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [100000, 1000000, 10000000, 100000000, 1000000000],
+            "range": [10, 50, 150, 200, 300, 400]
+          },
+          "legend": {"format": ""}
+        },
+        "color": {
+          "field": "Income",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Low income",
+              "Lower middle income",
+              "Upper middle income",
+              "High income"
+            ],
+            "range": ["#0571b0", "#ca0020", "#7b3294", "#008837"]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "income_highlight", "value": 0.8},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Population", "type": "quantitative", "format": ","},
+          {"field": "World_Share", "type": "quantitative", "format": ","},
+          {"field": "Net", "type": "quantitative", "format": ","},
+          {
+            "field": "Expected_Population",
+            "type": "quantitative",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "circle": {"stroke":"black", "strokeWidth": 1},
+    "style": {"cell": {"stroke": "transparent"}},
+    "background": "#fAf0e6",
+    "font": "",
+    "axis": {"labelFontSize": 12, "titleFontSize": 15, "titlePadding": 30}
+  }
+}
