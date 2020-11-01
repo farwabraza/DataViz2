@@ -41,12 +41,12 @@
       "legend": null,
       "scale": {
         "domain": [
-          "High Income",
           "Low Income",
+          "Lower Middle Income",
           "Upper Middle Income",
-          "Lower Middle Income"
+          "High Income"
         ],
-        "range": ["#0571b0", "#ca0020", "#7b3294", "#008837"]
+        "range": ["#0571b0", "#ca0020", "#7b3294","#008837"]
       }
     },
     "tooltip": [
