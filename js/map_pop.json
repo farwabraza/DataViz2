@@ -24,26 +24,28 @@
   ],
   "projection": {"type": "equirectangular"},
   "selection": {
-  "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
-  "select": {"type": "multi"}
+    "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
+    "select": {"type": "multi"}
   },
-  "mark": {"type": "geoshape", "stroke": "darkblue"},
+  "mark": {"type": "geoshape", "stroke": "lightpink"},
   "encoding": {
     "color": {
       "field": "Population",
       "type": "quantitative",
-      "scale": {
-        "type": "threshold",
-        "domain": [
-          100000,
-          1000000,
-          10000000,
-          100000000,
-          1000000000,
-          10000000000
-        ]
-      },
-      "condition": [{"selection": "highlight", "value": "#f0f0f0"}]
+              "scale": {
+                "range": [
+                  "#feedde",
+                  "#fdd0a2",
+                  "#fdae6b",
+                  "#fd8d3c",
+                  "#f16913",
+                  "#d94801",
+                  "#8c2d04"
+                ],
+                "type": "bin-ordinal",
+                "domain": [100000, 1000000, 10000000, 100000000, 1000000000]
+              },
+      "condition": [{"selection": "highlight", "value": "#99000d"}]
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
@@ -53,9 +55,8 @@
     ]
   },
   "config": {
-    "style": {"cell": {"stroke": "transparent"}
-  },
-   "legend": { 
+    "style": {"cell": {"stroke": "transparent"}},
+    "legend": {
       "orient": "bottom-left",
       "gradientDirection": "horizontal",
       "gradientLength": 150
