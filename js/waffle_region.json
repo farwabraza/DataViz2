@@ -98,7 +98,7 @@
           "#984ea3"
         ]
       },
-      "legend": {"orient": "right"}
+      "legend": {"orient": "left"}
     },
     "opacity": {
       "condition": {"selection": "region_highlight", "value": 1},
