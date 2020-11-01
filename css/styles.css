@@ -126,12 +126,26 @@ grid-area: Para;
 .income-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
+    "Title Title Title Title"
     "Scatter Scatter Scatter Radial"
     "Scatter Scatter Scatter Radial";
 }
+
+.Title { grid-area: Title; }
+#Title {
+  grid-area: Title;
+	  display: grid;
+	  place-items: center;
+          width: auto;
+          height: 100px;
+          text-align: center;
+          background-color: #f2d9bf;
+          justify-content: center;
+}
+
 .Radial { grid-area: Radial; }
 #Radial {
   grid-area: Radial;
