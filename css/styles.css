@@ -169,8 +169,8 @@ grid-area: Para;
   gap: 0px 0px;
   grid-template-areas:
     "Title1 Title1 Title1 Title1"
-    "Waffle Dotplot Dotplot Dotplot"
-    "Waffle Dotplot Dotplot Dotplot";
+    "Waffle Waffle Dotplot Dotplot"
+    "Waffle Waffle Dotplot Dotplot";
 }
 
 .Title1 { grid-area: Title1; }
