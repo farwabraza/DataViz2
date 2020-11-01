@@ -199,3 +199,24 @@ grid-area: Para;
 	  place-items: center;
 	margin: 0 auto;
 }
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Footer Footer Footer Footer";
+}
+
+.Footer { grid-area: Footer; }
+#Footer {
+  grid-area: Footer;
+	  display: grid;
+	  place-items: center;
+          width: auto;
+          height: 100px;
+          text-align: center;
+          background-color: #f2d9bf;
+          justify-content: center;
+}
