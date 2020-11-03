@@ -27,7 +27,7 @@
     "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
     "select": {"type": "multi"}
   },
-  "mark": {"type": "geoshape", "stroke": "lightpink"},
+  "mark": {"type": "geoshape", "stroke": "brown"},
   "encoding": {
     "color": {
       "field": "Population",
