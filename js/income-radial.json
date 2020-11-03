@@ -50,7 +50,7 @@
       }
     },
     "tooltip": [
-      {"field": "category", "type": "nominal"},
+      {"field": "category", "title":"Income Group", "type": "nominal"},
       {
         "field": "value",
         "type": "quantitative",
